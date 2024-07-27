@@ -1,5 +1,4 @@
 import styles from '@/app/page.module.css';
-import NavBar from './NavBar';
 
 function Header() {
 	return (
