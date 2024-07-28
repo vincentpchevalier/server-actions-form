@@ -1,9 +1,7 @@
 async function Movies() {
-	let base = process.env.BASE;
-	let url = `${base}/api/movies`;
-	let res = await fetch(url, {
-		method: 'GET',
-	});
+	let base = process.env.BASE_URL;
+	let url = `${base}/movies`;
+	let res = await fetch(url);
 
 	let data = await res.json();
 	console.log(data);
