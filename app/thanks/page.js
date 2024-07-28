@@ -19,7 +19,6 @@ function Page() {
 			</h2>
 
 			<Link href="/">Return to Form</Link>
-			<Link href="/staff">Speak to a manager</Link>
 		</div>
 	);
 }
