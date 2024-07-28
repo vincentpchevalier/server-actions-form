@@ -1,4 +1,4 @@
-function Movie() {
-	return <main>Movie</main>;
+function MovieDetails({ params }) {
+	return <main>Movie Details ID: {params.details}</main>;
 }
-export default Movie;
+export default MovieDetails;
