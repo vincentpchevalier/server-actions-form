@@ -23,7 +23,7 @@ function Form() {
 	return (
 		<>
 			<h2>Complaint Form</h2>
-			<form id="complaintform" onSubmit={handleSubmit}>
+			<form id="complaintform" action={handleForm}>
 				<p>
 					<label htmlFor="studentname">Student Name</label>
 					<input type="text" name="studentname" />
