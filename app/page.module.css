@@ -22,3 +22,10 @@
 .main > *:not(section) {
 	margin-bottom: 1.5rem;
 }
+
+.name {
+	color: slateblue;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
