@@ -10,8 +10,10 @@ async function MovieDetails({ params }) {
 
 	const data = await res.json();
 	console.log('data from api: ', data);
+
 	return (
 		<main>
+			<h2>Movie Details</h2>
 			<Details details={data} />
 		</main>
 	);

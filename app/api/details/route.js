@@ -12,11 +12,11 @@ export async function GET() {
 		if (!res.ok) throw new Error(error);
 		const data = await res.json();
 		console.log('data:', data);
-		const { original_title, overview, poster_path, id, release_date } = data;
+		const { original_title, overview, backdrop_path, id, release_date } = data;
 		let filmInfo = {
 			title: original_title,
 			overview,
-			poster_path,
+			detailsImageUrl: `https://image.tmdb.org/t/p/original${backdrop_path}`,
 			id,
 			release_date,
 		};
