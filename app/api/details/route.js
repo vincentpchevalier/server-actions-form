@@ -9,7 +9,7 @@ export async function GET() {
 
 	try {
 		let res = await fetch(url);
-
+		if (!res.ok) throw new Error(error);
 		const data = await res.json();
 		console.log('data:', data);
 		const { original_title, overview, poster_path, id, release_date } = data;
@@ -28,5 +28,10 @@ export async function GET() {
 			},
 			status: 200,
 		});
-	} catch (err) {}
+	} catch (err) {
+		return new Response(JSON.stringify({ error: err.message }), {
+			status: 500,
+			headers: { 'Content-Type': 'application/json' },
+		});
+	}
 }
