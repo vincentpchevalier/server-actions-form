@@ -1,6 +1,7 @@
 'use client';
 
 import { handleForm } from '@/app/actions';
+import MoviesButton from './MoviesButton';
 
 function Form() {
 	function handleSubmit(e) {
@@ -42,6 +43,7 @@ function Form() {
 				</p>
 				<p>
 					<button>File complaint</button>
+					<MoviesButton />
 				</p>
 			</form>
 		</>
