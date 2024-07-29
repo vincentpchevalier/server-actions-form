@@ -3,6 +3,8 @@
 import { handleForm } from '@/app/actions';
 import MoviesButton from './MoviesButton';
 
+import styles from '@/app/page.module.css';
+
 function Form() {
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -24,7 +26,11 @@ function Form() {
 	return (
 		<>
 			<h2>Complaint Form</h2>
-			<form id="complaintform" action={handleForm}>
+			<form
+				id="complaintform"
+				className={styles.complaintform}
+				action={handleForm}
+			>
 				<p>
 					<label htmlFor="studentname">Student Name</label>
 					<input type="text" name="studentname" />
@@ -42,7 +48,7 @@ function Form() {
 					></textarea>
 				</p>
 				<p>
-					<button>File complaint</button>
+					<button className={styles.button}>File complaint</button>
 					<MoviesButton />
 				</p>
 			</form>

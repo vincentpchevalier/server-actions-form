@@ -23,6 +23,38 @@
 	margin-bottom: 1.5rem;
 }
 
+.complaintform {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	padding: 2rem 1.5rem;
+	background-color: rgb(40, 147, 40);
+	border-radius: 0.5rem;
+	box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.2);
+
+	& > p {
+		margin: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		& > label {
+			font-weight: 600;
+			color: rgb(35, 33, 33);
+			flex-basis: 8rem;
+		}
+
+		& > input,
+		& > textarea {
+			flex-grow: 1;
+
+			padding: 0.5rem;
+		}
+	}
+}
+
 .name {
 	color: slateblue;
 	text-transform: uppercase;
@@ -51,5 +83,26 @@
 	& > p {
 		margin-bottom: 0;
 		line-height: 1.4;
+	}
+}
+
+.button {
+	background-color: linen;
+	color: rgb(33, 33, 33);
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.2);
+	border: 0.15rem solid rgb(24, 53, 9);
+
+	font-weight: 600;
+	font-size: 1rem;
+	text-transform: uppercase;
+
+	transition: all 170ms;
+
+	&:hover,
+	&:focus {
+		background-color: rgb(24, 53, 9);
+		color: linen;
 	}
 }
