@@ -9,7 +9,13 @@ function MovieCard({ movie }) {
 	const { title, release_date, posterImageUrl, id } = movie;
 	return (
 		<div className={styles.movie} onClick={() => router.push(`/movies/${id}`)}>
-			<Image src={posterImageUrl} alt={title} width={300} height={500} />
+			<Image
+				className={styles.image}
+				src={posterImageUrl}
+				alt={title}
+				width={300}
+				height={500}
+			/>
 			<h3>{title}</h3>
 			<p>{release_date}</p>
 		</div>

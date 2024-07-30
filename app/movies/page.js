@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import MovieCard from '../components/MovieCard';
 import styles from '@/app/page.module.css';
 
@@ -57,6 +58,15 @@ async function Movies() {
 	return (
 		<main className={styles.main}>
 			<h2>Now Playing</h2>
+			<section className={styles.intro}>
+				<p>
+					The following movies are now showing at a theatre near you. Why
+					don&apos;t you go take a break?
+				</p>
+				<Link className={styles.button} href="/">
+					Return to Complain
+				</Link>
+			</section>
 			<section className={styles.movies}>{movies}</section>
 		</main>
 	);
