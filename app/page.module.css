@@ -78,7 +78,7 @@
 	gap: 2rem;
 }
 
-.movie {
+.Card {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
