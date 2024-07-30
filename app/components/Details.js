@@ -10,10 +10,16 @@ function Details({ details }) {
 
 	return (
 		<section className={styles.details}>
-			<Image src={detailsImageUrl} alt={title} width={800} height={500} />
+			<Image
+				src={detailsImageUrl}
+				alt={title}
+				width={800}
+				height={500}
+				className={styles.detailsImg}
+			/>
 			<h3>{title}</h3>
-			<p>{overview}</p>
 			<p>{release_date}</p>
+			<p>{overview}</p>
 		</section>
 	);
 }

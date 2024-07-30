@@ -1,5 +1,7 @@
 import Details from '@/app/components/Details';
 
+import styles from '@/app/page.module.css';
+
 async function MovieDetails({ params }) {
 	const { id } = params;
 	const base = process.env.BASE_URL;
@@ -12,7 +14,7 @@ async function MovieDetails({ params }) {
 	console.log('data from api: ', data);
 
 	return (
-		<main>
+		<main className={styles.main}>
 			<h2>Movie Details</h2>
 			<Details details={data} />
 		</main>
