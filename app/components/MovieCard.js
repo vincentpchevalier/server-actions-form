@@ -1,23 +1,28 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-
 import styles from '@/app/page.module.css';
 
+// const { title, release_date, posterImageUrl, id } = movie;
+
+// next.config.mjs:
+// images: {
+// 		remotePatterns: [
+// 			{
+// 				protocol: 'https',
+// 				hostname: 'image.tmdb.org',
+// 				port: '',
+// 				pathname: '/t/p/original/**',
+// 			},
+// 		],
+// 	},
+
 function MovieCard({ movie }) {
-	const router = useRouter();
-	const { title, release_date, posterImageUrl, id } = movie;
+	// set to use client
+	// get movie data from props
+	// create router to push to details page on click
+	// import Image from 'next/image' and set the src, width, height, and alt
+	// set Image configuration in next.config.mjs
 	return (
-		<div className={styles.movie} onClick={() => router.push(`/movies/${id}`)}>
-			<Image
-				className={styles.image}
-				src={posterImageUrl}
-				alt={title}
-				width={300}
-				height={500}
-			/>
-			<h3>{title}</h3>
-			<p>{release_date}</p>
+		<div className={styles.movieCard}>
+			{/* movie data for the preview card */}
 		</div>
 	);
 }

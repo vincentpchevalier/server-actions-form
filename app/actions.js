@@ -1,12 +1,9 @@
-'use server';
-
 import { redirect } from 'next/navigation';
 
 export async function handleForm(formData) {
-	'use server';
-	console.log(formData); // this appears in the dev server console but not in the browser console
-
-	const studentname = encodeURIComponent(formData.get('studentname'));
-
-	redirect(`/thanks?name=${studentname}`);
+	console.log(formData);
+	// set to use server
+	// get name from form data
+	// put it in the url for the redirect to thank you page
+	// redirect to thank you page
 }

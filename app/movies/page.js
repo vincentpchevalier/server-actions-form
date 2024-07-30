@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import MovieCard from '../components/MovieCard';
 import styles from '@/app/page.module.css';
 
 const fakedata = [
@@ -41,33 +39,19 @@ const fakedata = [
 ];
 
 async function Movies() {
-	let base = process.env.BASE_URL;
-	let url = `${base}/movies`;
-	let res = await fetch(url);
-
-	let data = await res.json();
-	console.log(data);
+	// get base url from env variable
+	// fetch data from api at /movies endpoint
+	// Response will come from the route.js server action
 
 	// let movies = fakedata.map((movie) => {
 	// 	return <MovieCard key={movie.id} movie={movie} />;
 	// });
-	let movies = data.map((movie) => {
-		return <MovieCard key={movie.id} movie={movie} />;
-	});
 
 	return (
 		<main className={styles.main}>
 			<h2>Now Playing</h2>
-			<section className={styles.intro}>
-				<p>
-					The following movies are now showing at a theatre near you. Why
-					don&apos;t you go take a break?
-				</p>
-				<Link className={styles.button} href="/">
-					Return to Complain
-				</Link>
-			</section>
-			<section className={styles.movies}>{movies}</section>
+			{/* show intro section with Link back to complain */}
+			{/* show movies as MovieCards component */}
 		</main>
 	);
 }

@@ -1,25 +1,15 @@
-'use client';
-import Image from 'next/image';
+// const { title, overview, detailsImageUrl, release_date } = details;
 
 import styles from '@/app/page.module.css';
 
-function Details({ details }) {
-	console.log(details);
-	const { title, overview, detailsImageUrl, id, release_date } = details;
-	console.log(detailsImageUrl);
+function Details() {
+	// set to use client
+	// get details data from props
+	// import Image and set the src, width, height, and alt
 
 	return (
 		<section className={styles.details}>
-			<Image
-				src={detailsImageUrl}
-				alt={title}
-				width={800}
-				height={500}
-				className={styles.detailsImg}
-			/>
-			<h3>{title}</h3>
-			<p>{release_date}</p>
-			<p>{overview}</p>
+			{/* details data for the details card */}
 		</section>
 	);
 }

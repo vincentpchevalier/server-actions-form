@@ -1,11 +1,9 @@
-'use client';
-
-import { handleForm } from '@/app/actions';
-import MoviesButton from './MoviesButton';
-
 import styles from '@/app/page.module.css';
 
 function Form() {
+	// set to use client
+	// on form action call handleForm from server action file
+
 	function handleSubmit(e) {
 		e.preventDefault();
 		const formData = new FormData(e.target);
@@ -20,17 +18,13 @@ function Form() {
 			localStorage.setItem('tally', 1);
 		}
 
-		handleForm(formData);
+		// add handle Form server action if you use this
 	}
 
 	return (
 		<>
 			<h2>Complaint Form</h2>
-			<form
-				id="complaintform"
-				className={styles.complaintform}
-				action={handleForm}
-			>
+			<form id="complaintform" className={styles.complaintform}>
 				<p>
 					<label htmlFor="studentname">Student Name</label>
 					<input type="text" name="studentname" />
@@ -49,7 +43,6 @@ function Form() {
 				</p>
 				<p>
 					<button className={styles.button}>File complaint</button>
-					<MoviesButton />
 				</p>
 			</form>
 		</>
