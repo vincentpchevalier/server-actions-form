@@ -10,7 +10,7 @@ function Page() {
 	const name = useSearchParams().get('name');
 
 	return (
-		<div>
+		<main className={styles.main}>
 			<h2>
 				Thank you <span className={styles.name}>{name}</span> for your
 				complaint.
@@ -18,8 +18,10 @@ function Page() {
 				complaints. */}
 			</h2>
 
-			<Link href="/">Return to Form</Link>
-		</div>
+			<Link className={styles.button} href="/">
+				Return to Form
+			</Link>
+		</main>
 	);
 }
 export default Page;
