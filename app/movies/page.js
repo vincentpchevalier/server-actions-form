@@ -39,6 +39,13 @@ const fakedata = [
 ];
 
 async function Movies() {
+	let base = process.env.BASE_URL;
+	let url = `${base}/api/movies`;
+	let res = await fetch(url);
+	// console.log(res);
+
+	let data = await res.json();
+	console.log(data);
 	// get base url from env variable
 	// fetch data from api at /movies endpoint
 	// Response will come from the route.js server action

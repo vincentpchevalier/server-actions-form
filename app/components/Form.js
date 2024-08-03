@@ -1,4 +1,8 @@
+// 'use client';
+import { handleForm } from '@/app/actions';
+
 import styles from '@/app/page.module.css';
+import MoviesButton from './MoviesButton';
 
 function Form() {
 	// set to use client
@@ -9,6 +13,7 @@ function Form() {
 		const formData = new FormData(e.target);
 		console.log('getting form data');
 		console.log(formData);
+		console.log(formData.get('email'));
 
 		if (localStorage.getItem('tally') >= 1) {
 			let tally = localStorage.getItem('tally');
@@ -19,12 +24,17 @@ function Form() {
 		}
 
 		// add handle Form server action if you use this
+		handleForm(formData);
 	}
 
 	return (
 		<>
 			<h2>Complaint Form</h2>
-			<form id="complaintform" className={styles.complaintform}>
+			<form
+				action={handleForm}
+				id="complaintform"
+				className={styles.complaintform}
+			>
 				<p>
 					<label htmlFor="studentname">Student Name</label>
 					<input type="text" name="studentname" />
@@ -43,6 +53,7 @@ function Form() {
 				</p>
 				<p>
 					<button className={styles.button}>File complaint</button>
+					<MoviesButton />
 				</p>
 			</form>
 		</>
